@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fly High</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <link href="styles/css/style1.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo"><a href="/Passenger_About">FLY HIGH</a></h1>
+
+    <nav class="nav-menu d-none d-lg-block">
+
+      <ul>
+        <!--
+        <li><a href="index.html">Home</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="verify.html">Verify</a></li>
+        <li><a href="login.html">Login</a></li>
+        -->
+        <li><a href="/Passenger_About">About</a></li>
+        <li><a href="/Passenger_Profile">Profile</a></li>
+        <li><a href="/Passenger_Flight_View">View Flight</a></li>
+        <li class="active"><a href="/Passenger_Cancel_Flight">Scheduled Flights</a></li>
+        <li><a href="/Passenger_Flight_History">Flight's History</a></li>
+      </ul>
+
+    </nav><!-- .nav-menu -->
+<a role="button" href="/Logout1" class="btn ml-auto" style="background-color:#d9232d;color:white">Logout</a>
+  </div>
+</header><!-- End Header -->
+
+  <main id="main">
+    
+    <!-- ======= Scheduled Flight Section ======= -->
+    <section id="scheduledFlight" class="scheduledFlight">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="scheduledFlightHeading">Pending Flights</h2>
+          </div>
+          <div class="col-sm-12">
+            <table class="table">
+              <thead class="table-head">
+                <tr>
+                  <th scope="col">Ticket ID</th>
+                  <th scope="col">Source</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Flight Number</th>
+                  <th scope="col">Airline</th>
+                  <th scope="col">Departure Time</th>
+                  <th scope="col">Arrival Time</th>
+                  <th scope="col">Class</th>
+                  <th scope="col">Price</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+  
+              <tbody class="table-body">
+               <% Ticket_ID = [];%>
+              <% Flight_Source = [];%>
+              <% Flight_Destination = [];%>
+              <% Flight_Number = [];%>
+              <% Airline_Name = [];%>
+              <% DEPARTURE_TIME = [];%>
+              <% ARRIVAL_TIME = [];%>
+              <% Flight_Class = [];%>
+              <% P1 = [];%>
+              <% for(i=0;i<F.length;i++){ %>
+              <tr>
+               <td name =  "Ticket_ID"> <%= F[i].Ticket_ID %></td>
+                <td name = "Flight_Source"> <%= F[i].Flight_Source %> </td>
+                <td name = "Flight_Destination"> <%= F[i].Flight_Destination %> </td>
+                <td name = "Flight_Number"> <%= F[i].Flight_Number %> </td>
+                <td name = "Airline_Name"> <%= F[i].Airline_Name %> </td>
+                <td name = "DEPARTURE_TIME"> <%= F[i].DEPARTURE_TIME %> </td>
+                <td name = "ARRIVAL_TIME"> <%= F[i].ARRIVAL_TIME %> </td>
+                <td name = "Flight_Class"> <%= F[i].Flight_Class %> </td>
+                <td name = "P1"> <%= F[i].P1 %> </td>   
+                <td><button  type = "submit" class="btn"  onclick="myfunc(<%=i%>)" >Cancel</button></td>                             
+              </tr> 
+              <% Ticket_ID[i] = F[i].Ticket_ID; %>
+              <% Flight_Source[i] = F[i].Flight_Source; %>
+              <% Flight_Destination[i] = F[i].Flight_Destination; %>
+              <% Flight_Number[i] = F[i].Flight_Number; %>
+              <% Airline_Name[i] = F[i].Airline_Name; %>
+              <% DEPARTURE_TIME[i] = F[i].DEPARTURE_TIME; %>
+              <% ARRIVAL_TIME[i] = F[i].ARRIVAL_TIME; %>
+              <% Flight_Class[i] = F[i].Flight_Class; %>
+              <% P1[i] = F[i].P1; %>
+              <% } %>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cancel FLight Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>FLY HIGH</h3>
+              <p>
+                FAST NUCES <br>
+                Karachi 75950, Pakistan<br><br>
+                <strong>Phone:</strong> +1 2345 2345 67<br>
+                <strong>Email:</strong> K123456@nu.edu.pk<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Motto</h4>
+            <p>We offer you best flight booking experience ever with top airlines available right now.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Fly High</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Saif-Aly-Zain</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+
+<script type="text/javascript">
+    
+  function myfunc(ind)
+  {
+     i = ind;
+     <% var test = i; %>
+     var getTest = <%= test  %>;
+    console.log(' I am called '+getTest,<%=test%>);
+
+    var Ticket_ID = "<%=Ticket_ID%>";
+    Ticket_ID = Ticket_ID.split(",");
+    Ticket_ID = Ticket_ID[i];
+    var Flight_Source = "<%=Flight_Source%>";
+    Flight_Source = Flight_Source.split(",");
+    Flight_Source = Flight_Source[i];
+    var Flight_Destination = "<%=Flight_Destination%>";
+    Flight_Destination = Flight_Destination.split(",");
+    Flight_Destination = Flight_Destination[i];    
+    var Flight_Number = "<%=Flight_Number%>";
+    Flight_Number = Flight_Number.split(",");
+    Flight_Number = Flight_Number[i];      
+    var Airline_Name = "<%=Airline_Name%>";
+    Airline_Name = Airline_Name.split(",");
+    Airline_Name = Airline_Name[i];     
+    var DEPARTURE_TIME = "<%=DEPARTURE_TIME%>";
+    DEPARTURE_TIME = DEPARTURE_TIME.split(",");
+    DEPARTURE_TIME = DEPARTURE_TIME[i];      
+    var ARRIVAL_TIME = "<%=ARRIVAL_TIME%>";
+    ARRIVAL_TIME = ARRIVAL_TIME.split(",");
+    ARRIVAL_TIME = ARRIVAL_TIME[i];    
+    var Flight_Class = "<%=Flight_Class%>";
+    Flight_Class = Flight_Class.split(",");
+    Flight_Class = Flight_Class[i];     
+    var P1 = "<%=P1%>";
+    P1 = P1.split(",");
+    P1 = P1[i];    
+
+
+       
+        const tripData = {
+            Ticket_ID : Ticket_ID+"/",
+            Flight_Source : Flight_Source+"/" ,
+            Flight_Destination : Flight_Destination+"/" ,
+            Flight_Number : Flight_Number+"/" ,
+            Airline_Name : Airline_Name+"/" ,
+            DEPARTURE_TIME : DEPARTURE_TIME+"/" ,
+            ARRIVAL_TIME : ARRIVAL_TIME+"/" ,
+            Flight_Class : Flight_Class+"/" ,
+            Price : P1
+        };
+        const jsonString = JSON.stringify(tripData);
+        console.log(jsonString);
+        var xhttp=new XMLHttpRequest();
+        xhttp.open("GET","/CancelTrip/"+tripData.Ticket_ID + tripData.Flight_Source + tripData.Flight_Destination + tripData.Flight_Number+ tripData.Airline_Name+tripData.DEPARTURE_TIME+tripData.ARRIVAL_TIME+tripData.Flight_Class+tripData.Price ,true);
+        xhttp.onreadystatechange=()=>{
+        if(xhttp.readyState==4 && xhttp.status==200){
+          console.log("Response is:");
+          window.location.href = "http://localhost:3000/Passenger_Profile";
+
+
+
+          //response=JSON.parse(xhttp.responseText);
+          //console.log(response.trip_type);  
+}}
+  xhttp.send();
+//});   
+
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

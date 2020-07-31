@@ -1,0 +1,1059 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #d9232d;
+}
+
+a:hover {
+  color: #e24d55;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #d9232d;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #e1444d;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul {
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 12px 0 12px 28px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #556270;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #d9232d;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #556270;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #556270;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #d9232d;
+  text-decoration: none;
+}
+
+.mobile-nav .drop-down > a:after {
+  content: "\ea99";
+  font-family: IcoFont;
+  padding-left: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.mobile-nav .active.drop-down > a:after {
+  content: "\eaa1";
+}
+
+.mobile-nav .drop-down > a {
+  padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+  display: none;
+  overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+  padding-left: 20px;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(63, 73, 83, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: white;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+  box-shadow: 0 3px 15px #6b6b69;
+}
+#loginbtn {
+  background-color:#d9232d;
+  color:#fff;
+}
+@media (max-width: 992px) {
+  #header {
+    padding: 12px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(63, 73, 83, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+
+#hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hero .carousel-item::before {
+  content: '';
+  background-color: rgba(30, 35, 40, 0.6);
+}
+
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 70px;
+  left: 50px;
+  right: 50px;
+}
+
+#hero .container {
+  text-align: center;
+}
+
+#hero h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#hero p {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-left,
+#hero .carousel-inner .active.carousel-item-right {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-left,
+#hero .carousel-inner .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-left,
+#hero .carousel-inner .active.carousel-item-right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-prev, #hero .carousel-control-next {
+  width: 10%;
+  top: 112px;
+}
+
+@media (max-width: 992px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    top: 66px;
+  }
+}
+
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 36px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 10px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#hero .carousel-control-next-icon:hover, #hero .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  opacity: .6;
+  transition: 0.3s;
+}
+
+#hero .carousel-indicators li.active {
+  opacity: 1;
+  background: #d9232d;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero .carousel-container {
+    top: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 120vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg, .services .icon-box {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #e6636a;
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #556270;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+  margin-top: 80px;
+}
+.about h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.about .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.about .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #d9232d;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+.about .airlineCompanies div {
+  margin-top: 15px;
+  height: 220px;
+}
+#association {
+  margin-top: 100px;
+  height: 70px;
+  margin-bottom: 50px;;
+}
+#airline1 {
+  padding-left: 80px;
+}
+#airline2 {
+  padding-left: 80px;
+}
+#airline3 {
+  padding-left: 80px;
+}
+#airline4 {
+  padding-left: 80px;
+}
+#airline5 {
+  padding-left: 80px;
+}
+#airline6 {
+  padding-left: 80px;
+}
+
+/*--------------------------------------------------------------
+# Our Team
+--------------------------------------------------------------*/
+.team .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(85, 98, 112, 0.08);
+  padding: 30px;
+  border-radius: 4px;
+  background: white;
+}
+
+.team .member .pic {
+  overflow: hidden;
+  width: 140px;
+  border-radius: 4px;
+}
+
+.team .member .pic img {
+  transition: ease-in-out 0.3s;
+}
+
+.team .member:hover img {
+  transform: scale(1.1);
+}
+
+.team .member .member-info {
+  padding-left: 30px;
+}
+
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #556270;
+}
+
+.team .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+.team .member span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #dee2e6;
+  bottom: 0;
+  left: 0;
+}
+
+.team .member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.team .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.team .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  background: #8795a4;
+}
+
+.team .member .social a i {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.team .member .social a:hover {
+  background: #d9232d;
+}
+
+.team .member .social a + a {
+  margin-left: 8px;
+}
+
+/*--------------------------------------------------------------
+# Signup
+--------------------------------------------------------------*/
+.signup {
+  margin-top: 80px;
+}
+.signup .signupHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.signup .card h3 {
+  background-color: #d9232d;
+  text-align: center;
+}
+.signup .card button {
+  background-color: #d9232d;
+  color: #fff;
+  margin: 20px 0px 0px 18px;
+  width: 150px;
+}
+/*--------------------------------------------------------------
+# Verification
+--------------------------------------------------------------*/
+.verify .verificationHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444; 
+}
+.verify {
+  margin-top: 80px;
+}
+.verify .card h3 {
+  background-color: #d9232d;
+  text-align: center;
+}
+.verify .card button {
+  background-color: #d9232d;
+  color: #fff;
+  margin: 20px 0px 0px 18px;
+  width: 150px;
+}
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+.login .loginHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444; 
+}
+.login {
+  margin-top: 80px;
+}
+.login .card h3 {
+  background-color: #d9232d;
+  text-align: center;
+}
+.login .card button {
+  background-color: #d9232d;
+  color: #fff;
+  margin: 20px 0px 0px 18px;
+  width: 150px;
+}
+/*--------------------------------------------------------------
+# ViewFlight
+--------------------------------------------------------------*/
+.viewFlight {
+  margin-top: 80px;
+}
+.viewFlight .viewFlightsHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.viewFlight .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.viewFlight .btn:hover {
+  background: #e1444d;
+}
+.viewFlight .table {
+  margin-top: 50px;
+}
+.viewFlight .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+.viewFlight .table-body .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 6px 35px 6px 35px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.viewFlight .table-body .btn:hover {
+  background: #e1444d;
+}
+/*--------------------------------------------------------------
+# BookFlight
+--------------------------------------------------------------*/
+.bookFlight {
+  margin-top: 80px;
+}
+.bookFlight .bookFlightHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.bookFlight .card h3 {
+  background-color: #d9232d;
+  text-align: center;
+}
+.bookFlight .card button {
+  background-color: #d9232d;
+  color: #fff;
+  margin: 20px 0px 0px 18px;
+  width: 150px;
+}
+/*--------------------------------------------------------------
+# FlightHistory
+--------------------------------------------------------------*/
+.flightHistory {
+  margin-top: 80px;
+}
+.flightHistory .flightHistoryHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.flightHistory .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.flightHistory .btn:hover {
+  background: #e1444d;
+}
+.flightHistory .table {
+  margin-top: 10px;
+}
+.flightHistory .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# ScheduledFlight
+--------------------------------------------------------------*/
+.scheduledFlight {
+  margin-top: 80px;
+}
+.scheduledFlight .scheduledFlightHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.scheduledFlight .table {
+  margin-top: 10px;
+}
+.scheduledFlight .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+.scheduledFlight .table-body .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 6px 35px 6px 35px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.scheduledFlight .table-body .btn:hover {
+  background: #e1444d;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #4a5562;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  background: #515d6a;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#footer .credits a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+#footer .credits a:hover {
+  color: white;
+}
+.profile {
+  margin-top: 80px;
+}
+.profile .profileHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.profile .card h3 {
+  background-color: #e1444d;
+  text-align: center;
+}
+.profile .card .card-body {
+  font-size: 1em;
+}
+.profile .card .card-body dd, .profile .card .card-body dt {
+  padding-bottom: 10px;
+}
+/*--------------------------------------------------------------
+# ScheduledFlight
+--------------------------------------------------------------*/
+.scheduledFlight {
+  margin-top: 80px;
+}
+.scheduledFlight .scheduledFlightHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.scheduledFlight .table {
+  margin-top: 10px;
+}
+.scheduledFlight .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+.scheduledFlight .table-body .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 6px 35px 6px 35px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.scheduledFlight .table-body .btn:hover {
+  background: #e1444d;
+}
+/*--------------------------------------------------------------
+# Admin Customer
+--------------------------------------------------------------*/
+.admincustomer {
+  margin-top: 80px;
+}
+.admincustomer .admincustomerHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.admincustomer .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  margin-top: 30px;
+  margin-left: 15px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.admincustomer .btn:hover {
+  background: #e1444d;
+}
+.admincustomer .table {
+  margin-top: 50px;
+}
+.admincustomer .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Admin Airline
+--------------------------------------------------------------*/
+.adminAirline {
+  margin-top: 80px;
+}
+.adminAirline .adminAirlineHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.adminAirline .btn {
+  background: #d9232d;
+  display: inline-block;
+  padding: 8px 35px 9px 35px;
+  margin-top: 30px;
+  margin-left: 15px;
+  border-radius: 4px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.adminAirline .btn:hover {
+  background: #e1444d;
+}
+.adminAirline .table {
+  margin-top: 50px;
+}
+.adminAirline .table-head {
+  background: #d9232d;
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# PassengerTIcket
+--------------------------------------------------------------*/
+.passengerTicket {
+  margin-top: 80px;
+}
+.passengerTicket .passengerTicketHeading {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.passengerTicket .card h3 {
+  background-color: #e1444d;
+  text-align: center;
+  font-size: 50px;
+}
+#ticketFlightNumber {
+  padding-left: 7px;
+}
+.passengerTicket .card .card-body h4 {
+  font-size: 40px;
+  margin-top: 15px;
+}
+.passengerTicket span {
+  font-size: 1em;
+  opacity: 0.8;
+}
+.passengerTicket h5 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#passengerNameHeading h5 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+#flightTimes h5{
+  font-weight: normal;
+}

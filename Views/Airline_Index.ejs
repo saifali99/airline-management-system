@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fly High</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="public/assets/img/favicon.png" rel="icon">
+  <link href="public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+ <link href="styles/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo"><a href="/Airline_Index" style="color:#d9232d;">Fly High</a></h1>
+      <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+          <li class="active"><a href="/Airline_Index">Home</a></li>
+           <li><a href="/Airline_Register">Signup</a></li>
+            <li><a href="/Airline_Verification">Verification</a></li>
+          <li><a href="/Airline_Login">Login</a></li>          
+            
+        </ul>
+   
+      </nav><!-- .nav-menu -->
+
+      <a role="button" href="/Airline_Register" class="btn ml-auto" style="background-color:#d9232d;color:white">Get Started</a>
+    </div>
+  </header><!-- End Header -->
+  <div id="SignUpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#d9232d">
+                    <h4 class="modal-title" style="color:white" >Signup </h4>
+                    <button type="button" class="close" id="Cancel" style="color:white">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="name">Airline Name</label>
+                        <input type="text" class="form-control" id="name" placeholder = "Name"required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="Origin">Airline Origin</label>
+                        <input type="text" class="form-control" id="Origin" placeholder = "Origin"required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="Owner">Airline Owner</label>
+                        <input type="text" class="form-control" id="Owner" placeholder = "Owner"required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="Email">Airline Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder = "Enter Email"required>
+                      </div>
+                    </div> 
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder = "Password"required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="Confirm Password">Confirm Password</label>
+                        <input type="password" class="form-control" id="Confirm Password" placeholder = "Password" required>
+                      </div>
+                    </div> 
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <input type="file" class="form-control-file" id="Logo" required>
+                      </div>                                                          
+                      <div class="col-md-6 mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input is-invalid" type="checkbox" value="" id="check" required>
+                          <label class="form-check-label" for="check">Agree to terms and conditions</label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <button class="btn" type="submit" style="background-color:#d9232d ; color:white">Signup</button>
+                    <a role="button" id="Login" class="btn" style="background-color:#d9232d ; color:white">Login</a>
+                  </form>                    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="LoginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+          <div class="modal-content">
+              <div class="modal-header" style="background-color:#d9232d">
+                <h4 class="modal-title" style="color:white">Login </h4>
+                <button type="button" class="close" id="Cancel1" style="color:white">&times;</button>
+              </div>
+              <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-sm-4">
+                      <label class="sr-only" for="Email Address">Airline Email</label>
+                      <input type="email" class="form-control form-control-sm mr-1" id="Email Address" placeholder="Enter email" required>
+                  </div>
+                  <div class="form-group col-sm-4">
+                      <label class="sr-only" for="Airline Password">Password</label>
+                      <input type="password" class="form-control form-control-sm mr-1" id="Airline Password" placeholder="Password" required>
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label" id="R"> Remember me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                  <button class="btn" type="submit" style="background-color:#d9232d ; color:white">Login</button>
+                  <a role="button" id="Signup1" class="btn" style="background-color:#d9232d ; color:white">Signup</a>       
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>                  
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/img/Airline1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Lets Flight With <span>Fly High</span></h2>
+              <p class="animate__animated animate__fadeInUp">This is the airline hub, where various airlines can monitor their flight schedule</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/Airline2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Lets Flight With <span>Fly High</span></h2>
+              <p class="animate__animated animate__fadeInUp">This is the airline hub, where various airlines can monitor their flight schedule</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/Airline3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Lets Flight With <span>Fly High</span></h2>
+              <p class="animate__animated animate__fadeInUp">This is the airline hub, where various airlines can monitor their flight schedule</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>FLY HIGH</h2>
+            <h3>It is an airline portal that has the function of scheduling flights and an airline company has full access to this website</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul>
+              <li><i class="ri-check-double-line"></i>Schedule your flights and users will be notify</li>
+              <li><i class="ri-check-double-line"></i>Cancel flights in case of emergency</li>
+              <li><i class="ri-check-double-line"></i>You can change your price at any instance , can provide discounts</li>
+            </ul>
+            <p class="font-italic">
+              So what are you waiting for ? Lets fly with <strong>FLY HIGH</strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <p>Deals At a Glance</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Premium Membership For One Year</h5>
+                <p class="card-text">You have to pay 10000$.It could be refunded till one month of subscription</p>
+                <a id="Signup2" class="btn"style="background-color:#d9232d;color:white">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Premium Membership For Five Years</h5>
+                <p class="card-text">You have to pay 30000$.It could be refunded till one month of subscription</p>
+                <a id="Signup3" class="btn"style="background-color:#d9232d;color:white">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>FLY HIGH</h3>
+              <p>
+                Fast Nuces<br>
+                Shah Latif Town,Karachi<br><br>
+                <strong>Phone:</strong>+923122719890<br>
+                <strong>Email:</strong> k173630@nu.edu.pk<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/Airline_Index">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/Airline_Profile">Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/Airline_Flight_Scheduled">Flights Scheduled</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Airline Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tickets Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Passenger Relations</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FLY HIGH</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.linkedin.com/in/zain-zulfiqar-824825166/">Zain Zulfiqar</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="public/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="public/assets/vendor/php-email-form/validate.js"></script>
+  <script src="public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="public/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#Signup").click(function()
+            {
+                $('#SignUpModal').modal()
+            })
+        });    
+    </script> 
+    <script>
+        $(document).ready(function(){
+            $("#Signup2").click(function()
+            {
+                $('#SignUpModal').modal()
+            })
+        });    
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#Signup3").click(function()
+            {
+                $('#SignUpModal').modal()
+            })
+        });    
+    </script>        
+    <script>
+        $(document).ready(function(){
+            $("#Signup1").click(function()
+            {
+                $('#LoginModal').modal('hide')
+                $('#SignUpModal').modal()
+            })
+        });    
+    </script>    
+    <script>
+        $(document).ready(function(){
+            $("#Cancel").click(function()
+            {
+                $('#SignUpModal').modal('hide')
+            })
+        });    
+    </script> 
+    <script>
+        $(document).ready(function(){
+            $("#Login").click(function()
+            {
+                $('#SignUpModal').modal('hide')
+                $('#LoginModal').modal()
+                
+            })
+        });    
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#Cancel1").click(function()
+            {
+                $('#LoginModal').modal('hide')
+            })
+        });    
+    </script>    
+ 
+
+</body>
+
+</html>
